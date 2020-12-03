@@ -1,5 +1,15 @@
+/**
+ * Class Declaration
+ * 
+ * @class  GamblingSimulation
+ * @description  Computing Gambling Simalation problem
+ */
 class GamblingSimulation
 {
+    /**
+     * @constructor
+     * @description Displays welcome message
+     */
     constructor()
     {
         console.log("=======================================");
