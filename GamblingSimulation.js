@@ -155,12 +155,11 @@ class GamblingSimulation
     {
         var win=1;
         var bets=0;
-        var half_of_stake=Math.floor(stake/2);
 
         for(var i=0; i<trials; i++)
         {
             this.cash=stake;     //Putting value of Stake in cash variable    
-            while (this.cash > 0 && this.cash < goal || this.cash <= half_of_stake)
+            while (this.cash > 0 && this.cash < goal)
             {
                 bets++;
                 var random = Math.floor(Math.random() * 2);     //Getting 0 or 1 by using random function
@@ -180,10 +179,14 @@ class GamblingSimulation
             {
                 this.no_of_wins++;
             }
+            // else if(this.cash == stake/2)
+            // {
+            //     continue;
+            // }
         }
         console.clear();
         console.log("=======================================");
-        console.log("Game Results")
+        console.log("Game Results");
         console.log("=======================================");
         console.log(this.no_of_wins + " wins of " + trials);
         console.log(this.no_of_loss + " loss of " + trials);
